@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quran Clips: make a clip of the ayahs you love</title>
+<meta name="description" content="A free app for making Qur’an clips: pick the ayahs, set them over real nature, with the word being recited marked, and share the video. No ads, no accounts.">
+<meta name="theme-color" content="#f5f6f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0f0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/Newsreader_500Medium.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Set the theme before the page paints, so it never flashes the wrong one. Follows the device unless chosen.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"> Quran Clips</a>
+    <nav class="main" aria-label="Main">
+      <a class="hide-sm" href="index.html#features">Features</a>
+      <a class="hide-sm" href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark"><svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5 M12 19.5V22 M2 12h2.5 M19.5 12H22 M4.9 4.9l1.8 1.8 M17.3 17.3l1.8 1.8 M19.1 4.9l-1.8 1.8 M6.7 17.3l-1.8 1.8"/></svg><svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">Free · No ads · No accounts</p>
+        <h1>Pick the ayahs. Make a clip. Share it.</h1>
+        <p class="lead">Choose any surah and any ayahs, or just part of one. Set them over real nature, mark the word as it is recited, and share the video to WhatsApp, Instagram or anywhere.</p>
+        <div class="cta">
+          <a class="btn primary" href="#get">Get the app</a>
+          <a class="btn" href="#features">See what it does</a>
+        </div>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> Arabic never altered</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> Works offline for reading</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> Light and Dark</li>
+        </ul>
+      </div>
+      <div>
+        <div class="shots" aria-label="Three example shorts made with Quran Clips">
+          <figure class="shot left" style="margin:0"><img src="assets/short-dawn.jpg" alt="A short: Ash-Sharh 5 to 6 in Arabic over dawn ridges, with one word marked as it is recited" width="360" height="640" loading="eager"></figure>
+          <figure class="shot center" style="margin:0"><img src="assets/short-night.jpg" alt="A short: Al-Ikhlas over a green aurora behind pine trees" width="360" height="640" loading="eager"></figure>
+          <figure class="shot right" style="margin:0"><img src="assets/short-forest.jpg" alt="A short: Ar-Ra‘d 28 over a tree in mist, with the recited word underlined" width="360" height="640" loading="eager"></figure>
+        </div>
+        <p class="shots-note small muted">Shorts made in the app: real photographs, the word being recited marked, your choice of where the names sit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="verse" aria-label="A verse">
+    <div class="wrap">
+      <div class="ornament"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.00,0.60L10.17,2.77L13.23,2.77L13.23,5.83L15.40,8.00L13.23,10.17L13.23,13.23L10.17,13.23L8.00,15.40L5.83,13.23L2.77,13.23L2.77,10.17L0.60,8.00L2.77,5.83L2.77,2.77L5.83,2.77Z"/></svg></div>
+      <p class="arabic" lang="ar" data-ref="94:5">فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا</p>
+      <p class="arabic" lang="ar" data-ref="94:6" style="margin-top:0">إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرٗا</p>
+      <p class="ref">Ash-Sharh 94:5–6</p>
+      <p class="note">The verses are shown exactly as they are. The app never edits, shortens or rewrites the Arabic.</p>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What it does</p>
+        <h2>Made to bring you back to the words.</h2>
+        <p>Everything is built around one thing: meeting a verse with a calm heart, and wanting to return.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg></div><h3>Any ayahs you choose</h3><p>Pick a surah, tap the first ayah and the last. Or start from a favourite like Ayat al-Kursi or Al-Ikhlas.</p></article>
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4z M4 10.5h16 M8 3v4 M16 3v4"/></svg></div><h3>A whole ayah, or part of one</h3><p>Trim the recitation to exactly the words you want to share. The Arabic is never changed.</p></article>
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.2a4 4 0 0 1 3.1 1.5l5.4 7A4 4 0 0 0 17.8 17H21 M18 14l3 3-3 3 M3 17h3.2a4 4 0 0 0 3.1-1.5 M14.7 8.5A4 4 0 0 1 17.8 7H21 M18 4l3 3-3 3"/></svg></div><h3>Sliders, not fiddly buttons</h3><p>Darken, blur, shadow, text size and the edges are all sliders, and you see the change as you drag.</p></article>
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4 M8 7v10 M12 4v16 M16 8v8 M20 11v2"/></svg></div><h3>Listen and follow along</h3><p>Eight reciters. The word being recited is marked as you listen, in the colour and style you choose.</p></article>
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z M10.5 9v6l4.5-3z"/></svg></div><h3>Make a short in seconds</h3><p>Real nature behind the words: mountains, sea, sky, night, desert, forest. Gentle motion, a slow camera, your own photo, or free photos and videos. Then share.</p></article>
+        <article class="card"><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Free, with nothing to sign up for</h3><p>No ads, no accounts, no tracking. Made as sadaqah jariyah.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="how">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">How it works</p><h2>From an ayah to a clip in a minute.</h2></div>
+      <ol class="steps">
+        <li><div><h3>Pick the ayahs</h3><p>Find a surah and tap the first and last ayah of your clip.</p></div></li>
+        <li><div><h3>Style it</h3><p>Choose a scene, drag the sliders, move the names where you want them. The preview is the video.</p></div></li>
+        <li><div><h3>Share it</h3><p>Tap Share and send the video to WhatsApp or anywhere.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Our promises</p><h2>Built with care for the Ummah.</h2></div>
+      <div class="principles">
+        <div><h3>The Arabic is never changed</h3><p>Every Arabic word comes from one checked text, verified against a fixed checksum. The editor changes only the translation, and says so.</p></div>
+        <div><h3>It shows verses, not rulings</h3><p>Quran Clips points to the tafsir and to scholars. It does not interpret the Qur’an or issue fatwas.</p></div>
+        <div><h3>Free, and private by design</h3><p>No ads, no accounts, no tracking. What you read and your progress stay on your phone. <a href="privacy.html">Read how it works</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block get" id="get">
+    <div class="wrap">
+      <div class="card">
+        <span class="pill">Coming soon</span>
+        <h2 style="font-size:clamp(28px,4vw,38px)">Get Quran Clips</h2>
+        <p style="margin:12px 0 24px">The app is in its final stages for iPhone and Android. Want to help test it, or tell us what you would like it to do?</p>
+        <a class="btn primary" href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <p class="dua" lang="ar">جزاكم الله خيرًا</p>
+      <p style="margin:0">Quran Clips is free, with no ads and no accounts, as sadaqah jariyah. It shows the words of the Qur’an; it does not interpret them. For meaning, read the tafsir or ask a scholar.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Report a bug or suggest a feature</a>
+    </nav>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Quran Clips</title>
+<meta name="description" content="How Quran Clips treats your information: no accounts, no ads, no tracking.">
+<meta name="theme-color" content="#f5f6f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0f0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/Newsreader_500Medium.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Set the theme before the page paints, so it never flashes the wrong one. Follows the device unless chosen.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"> Quran Clips</a>
+    <nav class="main" aria-label="Main">
+      <a class="hide-sm" href="index.html#features">Features</a>
+      <a class="hide-sm" href="privacy.html" aria-current="page">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark"><svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5 M12 19.5V22 M2 12h2.5 M19.5 12H22 M4.9 4.9l1.8 1.8 M17.3 17.3l1.8 1.8 M19.1 4.9l-1.8 1.8 M6.7 17.3l-1.8 1.8"/></svg><svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Privacy</p>
+      <h1 style="font-size:clamp(36px,5vw,56px)">Your reading is your own.</h1>
+      <p>Quran Clips has no accounts, no ads and no tracking of people. Here, in plain words, is what happens with your information. Last updated 14 October 2026.</p>
+    </div>
+    <div class="prose">
+      <h2>What stays on your phone</h2>
+      <p>Your settings (language, reciter, theme, text size) are kept on your phone only. We never receive them. Browsing the Qur’an and choosing ayahs work on your phone, without sending anything anywhere.</p>
+
+      <h2>When something does leave your phone</h2>
+      <ul>
+        <li><strong>Listening.</strong> The recitation audio is fetched from a public recitation host (EveryAyah.com), the way a web page loads an image. The host can see that a phone asked for those audio files.</li>
+        <li><strong>Making a short.</strong> The app sends our server the verse reference, the options you chose (scene, highlight, where the names sit, the translation wording) and, only if you pick it, your own photo. The server makes the video and sends it back. These files are removed automatically after a few hours. We do not keep your shorts.</li>
+        <li><strong>Free photos and videos.</strong> If you browse the free library, your search words go to our server, which asks the photo provider (Pexels) on your behalf, so no key or identifier is on your phone.</li>
+        <li><strong>Tafsir links.</strong> A tafsir link opens Quran.com in your browser, under its own privacy terms.</li>
+      </ul>
+
+      <h2>When you contact us</h2>
+      <p>If you send a bug report or a feature request, we keep your message, the type, and (only if you typed them) your email, phone model and app version. We do not store your IP address or browser details. To stop spam, the server holds your address in its memory for up to an hour to count how many messages come from it, and then forgets it. A hidden field on the form helps tell people from spam bots; it records nothing about you. We use your email only to reply.</p>
+      <h2>Anonymous counts</h2>
+      <p>To learn what is useful and what is broken, our server keeps plain counts: for example how many times each surah was made into a video today, which reciter, which shape, how many videos failed, and how many times this website's pages were opened. These are totals per day. They are not tied to you or your phone, and they cannot be: we keep no account, device number, cookie or address with them, and nothing you type (captions, searches, messages) is counted. If something breaks in the app, it can send a short note saying which screen and what kind of error, with the app version and whether it is iPhone or Android, and never your content. This website skips its page count if your browser sends Do Not Track or Global Privacy Control. Nothing is sent to an analytics company; the counts stay on our own server.</p>
+
+      <h2>What we do not do</h2>
+      <ul>
+        <li>No accounts and no sign-in.</li>
+        <li>No ads and no ad networks.</li>
+        <li>Our server’s request log records what was asked for (for example, “make a short”), never who asked or what they searched for: it keeps no addresses and no search words.</li>
+        <li>No analytics companies and no tracking of people in the app or on this website (only the anonymous daily counts described above, kept on our own server). This site loads nothing from other sites: its fonts and images come from the site itself.</li>
+        <li>We do not sell or share information, because we do not collect personal information.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Quran Clips collects no personal information from anyone, including children.</p>
+
+      <h2>Questions</h2>
+      <p>Ask us through the <a href="contact.html">contact page</a>.</p>
+
+      <div class="callout"><strong>A note on this page.</strong> It is a plain-language summary of how the app is built today. If the app changes how it handles information, this page changes first.</div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <p class="dua" lang="ar">جزاكم الله خيرًا</p>
+      <p style="margin:0">Quran Clips is free, with no ads and no accounts, as sadaqah jariyah. It shows the words of the Qur’an; it does not interpret them. For meaning, read the tafsir or ask a scholar.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Report a bug or suggest a feature</a>
+    </nav>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
