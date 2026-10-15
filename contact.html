@@ -1,121 +1,265 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact: report a bug or suggest a feature · Quran Clips</title>
-<meta name="description" content="Tell us about a bug, or suggest a feature, for the Quran Clips app.">
-<meta name="theme-color" content="#f5f6f5" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0f0d" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/Newsreader_500Medium.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css">
-<script>
-  // Set the theme before the page paints, so it never flashes the wrong one. Follows the device unless chosen.
-  (function () {
-    var t = null;
-    try { t = localStorage.getItem("theme"); } catch (e) {}
-    if (t !== "light" && t !== "dark") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", t);
-  })();
-</script>
-</head>
-<body>
-<a class="skip" href="#main">Skip to the content</a>
-<header class="site">
-  <div class="wrap bar">
-    <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"> Quran Clips</a>
-    <nav class="main" aria-label="Main">
-      <a class="hide-sm" href="index.html#features">Features</a>
-      <a class="hide-sm" href="privacy.html">Privacy</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </nav>
-    <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark"><svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5 M12 19.5V22 M2 12h2.5 M19.5 12H22 M4.9 4.9l1.8 1.8 M17.3 17.3l1.8 1.8 M19.1 4.9l-1.8 1.8 M6.7 17.3l-1.8 1.8"/></svg><svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact: report a bug or suggest a feature · Quran Clips</title>
+    <meta name="description" content="Tell us about a bug, or suggest a feature, for the Quran Clips app." />
+    <meta name="theme-color" content="#f5f6f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0f0d" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/Newsreader_500Medium.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Set the theme before the page paints, so it never flashes the wrong one. Follows the device unless chosen.
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem('theme');
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark')
+          t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the content</a>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30" /> Quran Clips</a>
+        <nav class="main" aria-label="Main">
+          <a class="hide-sm" href="index.html#features">Features</a>
+          <a class="hide-sm" href="privacy.html">Privacy</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark">
+          <svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2.5 M12 19.5V22 M2 12h2.5 M19.5 12H22 M4.9 4.9l1.8 1.8 M17.3 17.3l1.8 1.8 M19.1 4.9l-1.8 1.8 M6.7 17.3l-1.8 1.8"
+            /></svg
+          ><svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
-<main id="main">
-  <div class="wrap">
-    <div class="page-head">
-      <p class="eyebrow">Contact</p>
-      <h1 style="font-size:clamp(36px,5vw,56px)">Report a bug or suggest a feature.</h1>
-      <p>Found something that does not work? Wish the app did something it does not? Tell us. We read every message.</p>
-    </div>
-    <div class="two">
-      <aside class="aside" aria-label="Tips">
-        <h3>A good bug report</h3>
-        <ul>
-          <li>What you did, step by step</li>
-          <li>What you expected, and what happened instead</li>
-          <li>Your phone and the app version (Settings, at the bottom)</li>
-        </ul>
-        <h3>A good feature request</h3>
-        <p>Tell us the problem you are trying to solve, not only the button you imagine. It helps us build the right thing.</p>
-        <h3>Your privacy</h3>
-        <p>We keep only your message, and your email if you give one so we can reply. Not your address, not your browser. See <a href="privacy.html">Privacy</a>.</p>
-        <p id="direct" class="small" hidden></p>
-      </aside>
+    <main id="main">
+      <div class="wrap">
+        <div class="page-head">
+          <p class="eyebrow">Contact</p>
+          <h1 style="font-size: clamp(36px, 5vw, 56px)">Report a bug or suggest a feature.</h1>
+          <p>
+            Found something that does not work? Wish the app did something it does not? Tell us. We read every message.
+          </p>
+        </div>
+        <div class="two">
+          <aside class="aside" aria-label="Tips">
+            <h3>A good bug report</h3>
+            <ul>
+              <li>What you did, step by step</li>
+              <li>What you expected, and what happened instead</li>
+              <li>Your phone and the app version (Settings, at the bottom)</li>
+            </ul>
+            <h3>A good feature request</h3>
+            <p>
+              Tell us the problem you are trying to solve, not only the button you imagine. It helps us build the right
+              thing.
+            </p>
+            <h3>Your privacy</h3>
+            <p>
+              We keep only your message, and your email if you give one so we can reply. Not your address, not your
+              browser. See <a href="privacy.html">Privacy</a>.
+            </p>
+            <p id="direct" class="small" hidden></p>
+          </aside>
 
-      <div>
-        <form class="form" id="form" novalidate>
-          <fieldset>
-            <legend>What is this about?</legend>
-            <div class="types" role="radiogroup">
-              <div><input type="radio" id="t-bug" name="type" value="bug" checked><label for="t-bug"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 8a3 3 0 0 1 6 0 M8 8h8v6a4 4 0 0 1-8 0z M12 11v6 M4 11h4 M16 11h4 M5 18l3-2 M19 18l-3-2 M5 6l3 2 M19 6l-3 2"/></svg> Bug report</label></div>
-              <div><input type="radio" id="t-feature" name="type" value="feature"><label for="t-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg> Feature request</label></div>
-              <div><input type="radio" id="t-other" name="type" value="other"><label for="t-other"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v10H9l-5 4z"/></svg> Something else</label></div>
+          <div>
+            <form class="form" id="form" novalidate>
+              <fieldset>
+                <legend>What is this about?</legend>
+                <div class="types" role="radiogroup">
+                  <div>
+                    <input type="radio" id="t-bug" name="type" value="bug" checked /><label for="t-bug"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M9 8a3 3 0 0 1 6 0 M8 8h8v6a4 4 0 0 1-8 0z M12 11v6 M4 11h4 M16 11h4 M5 18l3-2 M19 18l-3-2 M5 6l3 2 M19 6l-3 2"
+                        />
+                      </svg>
+                      Bug report</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" id="t-feature" name="type" value="feature" /><label for="t-feature"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"
+                        />
+                      </svg>
+                      Feature request</label
+                    >
+                  </div>
+                  <div>
+                    <input type="radio" id="t-other" name="type" value="other" /><label for="t-other"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M4 6h16v10H9l-5 4z" />
+                      </svg>
+                      Something else</label
+                    >
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label class="lbl" for="message">Your message</label>
+                <p class="help" id="help">What happened? What did you expect?</p>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="10"
+                  maxlength="4000"
+                  aria-describedby="help count"
+                  placeholder="Write in any language you like."
+                ></textarea>
+                <div class="count" id="count" aria-live="polite">0 / 4000</div>
+              </div>
+
+              <div class="row2" id="bugfields">
+                <div class="field">
+                  <label class="lbl" for="device"
+                    >Phone <span class="muted" style="font-weight: 400">(optional)</span></label
+                  ><input
+                    type="text"
+                    id="device"
+                    name="device"
+                    maxlength="120"
+                    placeholder="e.g. iPhone 15"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="field">
+                  <label class="lbl" for="version"
+                    >App version <span class="muted" style="font-weight: 400">(optional)</span></label
+                  ><input
+                    type="text"
+                    id="version"
+                    name="version"
+                    maxlength="40"
+                    placeholder="e.g. 0.1.0"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="lbl" for="email"
+                  >Your email
+                  <span class="muted" style="font-weight: 400">(optional, only if you want a reply)</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  maxlength="254"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  inputmode="email"
+                />
+              </div>
+
+              <div class="hp" aria-hidden="true">
+                <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+              </div>
+
+              <button class="btn primary" id="send" type="submit" style="width: 100%">Send</button>
+              <p class="status" id="status" role="status" aria-live="polite"></p>
+              <noscript><p class="status err">This form needs JavaScript. Please turn it on and reload.</p></noscript>
+            </form>
+
+            <div class="form done" id="done" hidden tabindex="-1">
+              <div class="tile">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>
+              </div>
+              <h2>Jazakumullahu khayran.</h2>
+              <p>We have your message. We read every one.</p>
+              <button class="btn" id="again" type="button">Send another</button>
             </div>
-          </fieldset>
-
-          <div class="field">
-            <label class="lbl" for="message">Your message</label>
-            <p class="help" id="help">What happened? What did you expect?</p>
-            <textarea id="message" name="message" required minlength="10" maxlength="4000" aria-describedby="help count" placeholder="Write in any language you like."></textarea>
-            <div class="count" id="count" aria-live="polite">0 / 4000</div>
           </div>
-
-          <div class="row2" id="bugfields">
-            <div class="field"><label class="lbl" for="device">Phone <span class="muted" style="font-weight:400">(optional)</span></label><input type="text" id="device" name="device" maxlength="120" placeholder="e.g. iPhone 15, iOS 19" autocomplete="off"></div>
-            <div class="field"><label class="lbl" for="version">App version <span class="muted" style="font-weight:400">(optional)</span></label><input type="text" id="version" name="version" maxlength="40" placeholder="e.g. 0.1.0" autocomplete="off"></div>
-          </div>
-
-          <div class="field">
-            <label class="lbl" for="email">Your email <span class="muted" style="font-weight:400">(optional, only if you want a reply)</span></label>
-            <input type="email" id="email" name="email" maxlength="254" placeholder="you@example.com" autocomplete="email" inputmode="email">
-          </div>
-
-          <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-
-          <button class="btn primary" id="send" type="submit" style="width:100%">Send</button>
-          <p class="status" id="status" role="status" aria-live="polite"></p>
-          <noscript><p class="status err">This form needs JavaScript. Please turn it on and reload.</p></noscript>
-        </form>
-
-        <div class="form done" id="done" hidden tabindex="-1">
-          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-          <h2>Jazakumullahu khayran.</h2>
-          <p>Your message is on its way to us. We read every one.</p>
-          <button class="btn" id="again" type="button">Send another</button>
         </div>
       </div>
-    </div>
-  </div>
-</main>
+    </main>
 
-<footer class="site">
-  <div class="wrap foot">
-    <div>
-      <p class="dua" lang="ar">جزاكم الله خيرًا</p>
-      <p style="margin:0">Quran Clips is free, with no ads and no accounts, as sadaqah jariyah. It shows the words of the Qur’an; it does not interpret them. For meaning, read the tafsir or ask a scholar.</p>
-    </div>
-    <nav aria-label="Footer">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Report a bug or suggest a feature</a>
-    </nav>
-  </div>
-</footer>
-<script src="config.js"></script>
-<script src="main.js"></script>
-</body>
+    <footer class="site">
+      <div class="wrap foot">
+        <div>
+          <p class="dua" lang="ar">جزاكم الله خيرًا</p>
+          <p style="margin: 0">
+            Quran Clips is free, with no ads and no accounts, as sadaqah jariyah. It shows the words of the Qur’an; it
+            does not interpret them. For meaning, read the tafsir or ask a scholar.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Report a bug or suggest a feature</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
