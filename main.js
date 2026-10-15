@@ -26,6 +26,45 @@
     });
   }
 
+  // ---- playable shorts in the hero ----
+  document.querySelectorAll(".shot").forEach(function (shot) {
+    var video = shot.querySelector("video");
+    var play = shot.querySelector(".shot-play");
+    if (!video || !play) return;
+    function stopOthers() {
+      document.querySelectorAll(".shot").forEach(function (other) {
+        if (other === shot) return;
+        var v = other.querySelector("video");
+        if (!v) return;
+        v.pause();
+        other.classList.remove("is-playing");
+        v.controls = false;
+      });
+    }
+    function close() {
+      video.pause();
+      shot.classList.remove("is-playing");
+      video.controls = false;
+    }
+    play.addEventListener("click", function (e) {
+      e.stopPropagation();
+      stopOthers();
+      video.controls = true;
+      shot.classList.add("is-playing");
+      var started = video.play();
+      if (started && started.catch) started.catch(function () { shot.classList.remove("is-playing"); video.controls = false; });
+    });
+    video.addEventListener("ended", function () {
+      shot.classList.remove("is-playing");
+      video.controls = false;
+      video.currentTime = 0;
+    });
+    document.addEventListener("click", function (e) {
+      if (!shot.classList.contains("is-playing") || shot.contains(e.target)) return;
+      close();
+    });
+  });
+
   // ---- contact form ----
   var form = document.getElementById("form");
   if (!form) return;

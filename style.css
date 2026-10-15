@@ -43,6 +43,7 @@ a:hover { text-decoration-thickness: 2px; }
 header.site { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line); }
 .bar { display: flex; align-items: center; gap: 18px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 500 24px/1 var(--serif); letter-spacing: -0.3px; margin-right: auto; }
+.brand img { width: 30px; height: 30px; border-radius: 8px; object-fit: cover; }
 .brand svg { width: 30px; height: 30px; }
 nav.main { display: flex; gap: 4px; }
 nav.main a { color: var(--ink-soft); text-decoration: none; font-weight: 500; font-size: 15px; padding: 9px 12px; border-radius: 10px; }
@@ -80,12 +81,20 @@ h3 { font-size: 22px; line-height: 1.25; letter-spacing: -0.01em; }
 .facts svg { width: 16px; height: 16px; color: var(--accent); }
 
 .shots { position: relative; display: flex; justify-content: center; align-items: center; padding: 10px 0 20px; }
-.shot { width: min(30vw, 200px); aspect-ratio: 9 / 16; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--raised); box-shadow: 0 30px 60px -28px var(--shadow); flex: none; }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot { position: relative; width: min(30vw, 200px); aspect-ratio: 9 / 16; margin: 0; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--raised); box-shadow: 0 30px 60px -28px var(--shadow); flex: none; }
+.shot img, .shot video { width: 100%; height: 100%; object-fit: cover; background: #111; }
+.shot-play { position: absolute; inset: 0; margin: 0; padding: 0; border: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent 42%); color: #0a6b4f; cursor: pointer; display: grid; place-items: center; }
+.shot-play span { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28); }
+.shot-play svg { width: 22px; height: 22px; margin-left: 2px; }
+.shot.is-playing .shot-play { display: none; }
+.shot.is-playing video { cursor: pointer; }
 .shot.center { width: min(38vw, 250px); margin: 0 -18px; z-index: 2; transform: translateY(-14px); }
 .shot.left { transform: rotate(-5deg) translateY(16px); }
 .shot.right { transform: rotate(5deg) translateY(16px); }
+body:has(.shot.is-playing)::before { content: ""; position: fixed; inset: 0; z-index: 30; background: rgba(8, 12, 10, 0.62); }
+.shot.is-playing { position: fixed; z-index: 40; left: 50%; top: 50%; width: min(78vw, 320px); margin: 0; transform: translate(-50%, -52%); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5); }
 @media (max-width: 899px) { .shot { width: min(28vw, 170px); } .shot.center { width: min(36vw, 210px); } }
+.shot.left.is-playing, .shot.center.is-playing, .shot.right.is-playing { width: min(78vw, 320px); }
 @media (prefers-reduced-motion: no-preference) {
   .shot { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   .shot.center { animation-delay: 0.08s; } .shot.right { animation-delay: 0.16s; }
